@@ -1,0 +1,25 @@
+# Compile of CA4.sv was successful.
+# Compile of CA4_TB.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.harmonic_sum_TB
+# vsim -gui work.harmonic_sum_TB 
+# Start time: 02:41:10 on Dec 20,2024
+# Loading sv_std.std
+# Loading work.harmonic_sum_TB
+# Loading work.harmonic_sum
+# Loading work.rom_harmonic
+# Loading work.adder
+# Loading work.comparator
+# Loading work.counter
+add wave -position insertpoint sim:/harmonic_sum_TB/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: sajadhp  Hostname: LAPTOP-556L3L6C  ProcessID: 14928
+#           Attempting to use alternate WLF file "./wlftvckdxi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvckdxi
+run -all
+# ** Note: $stop    : E:/UT/DLD/CA/4/Code/CA4_TB.sv(34)
+#    Time: 450 ns  Iteration: 0  Instance: /harmonic_sum_TB
+# Break in Module harmonic_sum_TB at E:/UT/DLD/CA/4/Code/CA4_TB.sv line 34
+# End time: 06:15:34 on Dec 20,2024, Elapsed time: 3:34:24
+# Errors: 0, Warnings: 4

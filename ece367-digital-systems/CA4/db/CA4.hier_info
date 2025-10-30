@@ -1,0 +1,150 @@
+|CA4
+clk => clk.IN1
+reset => reset.IN1
+n[0] => n[0].IN1
+n[1] => n[1].IN1
+n[2] => n[2].IN1
+n[3] => n[3].IN1
+sum[0] <= sum[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= sum[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[7] <= sum[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[8] <= sum[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[9] <= sum[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[10] <= sum[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[11] <= sum[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[12] <= sum[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[13] <= sum[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[14] <= sum[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[15] <= sum[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[16] <= sum[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[17] <= sum[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[18] <= sum[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CA4|rom_harmonic:rom
+addr[0] => Decoder0.IN3
+addr[1] => Decoder0.IN2
+addr[1] => Decoder1.IN2
+addr[2] => Decoder0.IN1
+addr[2] => Decoder1.IN1
+addr[2] => Decoder2.IN1
+addr[3] => Decoder0.IN0
+addr[3] => Decoder1.IN0
+addr[3] => Decoder2.IN0
+data[0] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data[8] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data[9] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data[10] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data[11] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data[12] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+data[13] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+data[14] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+data[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+data[16] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+data[17] <= <GND>
+data[18] <= <GND>
+
+
+|CA4|adder:add
+a[0] => Add0.IN19
+a[1] => Add0.IN18
+a[2] => Add0.IN17
+a[3] => Add0.IN16
+a[4] => Add0.IN15
+a[5] => Add0.IN14
+a[6] => Add0.IN13
+a[7] => Add0.IN12
+a[8] => Add0.IN11
+a[9] => Add0.IN10
+a[10] => Add0.IN9
+a[11] => Add0.IN8
+a[12] => Add0.IN7
+a[13] => Add0.IN6
+a[14] => Add0.IN5
+a[15] => Add0.IN4
+a[16] => Add0.IN3
+a[17] => Add0.IN2
+a[18] => Add0.IN1
+b[0] => Add0.IN38
+b[1] => Add0.IN37
+b[2] => Add0.IN36
+b[3] => Add0.IN35
+b[4] => Add0.IN34
+b[5] => Add0.IN33
+b[6] => Add0.IN32
+b[7] => Add0.IN31
+b[8] => Add0.IN30
+b[9] => Add0.IN29
+b[10] => Add0.IN28
+b[11] => Add0.IN27
+b[12] => Add0.IN26
+b[13] => Add0.IN25
+b[14] => Add0.IN24
+b[15] => Add0.IN23
+b[16] => Add0.IN22
+b[17] => Add0.IN21
+b[18] => Add0.IN20
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[10] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[11] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[12] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[13] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[16] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[17] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[18] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CA4|comparator:comp
+a[0] => LessThan0.IN4
+a[1] => LessThan0.IN3
+a[2] => LessThan0.IN2
+a[3] => LessThan0.IN1
+b[0] => LessThan0.IN8
+b[1] => LessThan0.IN7
+b[2] => LessThan0.IN6
+b[3] => LessThan0.IN5
+result <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CA4|counter:count_inst
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+reset => count[0]~reg0.ACLR
+reset => count[1]~reg0.ACLR
+reset => count[2]~reg0.ACLR
+reset => count[3]~reg0.ACLR
+enable => count[3]~reg0.ENA
+enable => count[2]~reg0.ENA
+enable => count[1]~reg0.ENA
+enable => count[0]~reg0.ENA
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

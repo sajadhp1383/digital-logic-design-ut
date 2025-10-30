@@ -1,0 +1,8 @@
+
+State Machine - |CA4|state
+Name state.ADD state.READ state.LOAD state.IDLE state.CHECK 
+state.IDLE 0 0 0 0 0 
+state.LOAD 0 0 1 1 0 
+state.READ 0 1 0 1 0 
+state.ADD 1 0 0 1 0 
+state.CHECK 0 0 0 1 1 

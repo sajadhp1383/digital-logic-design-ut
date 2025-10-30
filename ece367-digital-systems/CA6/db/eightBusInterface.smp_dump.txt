@@ -1,0 +1,21 @@
+
+State Machine - |eightBusInterface|outputWrapper:myOutputWrapper|ps
+Name ps.WaitForNext ps.ReceivingData ps.Loading ps.Idle 
+ps.Idle 0 0 0 0 
+ps.Loading 0 0 1 1 
+ps.ReceivingData 0 1 0 1 
+ps.WaitForNext 1 0 0 1 
+
+State Machine - |eightBusInterface|divider:myDivider|ps
+Name ps.Process ps.Load ps.Starting ps.Idle 
+ps.Idle 0 0 0 0 
+ps.Starting 0 0 1 1 
+ps.Load 0 1 0 1 
+ps.Process 1 0 0 1 
+
+State Machine - |eightBusInterface|inputWrapper:myInputWrapper|ps
+Name ps.WaitForNext ps.ReceivingData ps.Init ps.Idle 
+ps.Idle 0 0 0 0 
+ps.Init 0 0 1 1 
+ps.ReceivingData 0 1 0 1 
+ps.WaitForNext 1 0 0 1 

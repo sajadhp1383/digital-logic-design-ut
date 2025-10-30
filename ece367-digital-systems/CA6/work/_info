@@ -1,0 +1,206 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\UT\DLD\CA\4\SHasanpour02432-CA03-ECE367\Quartes
+vdivider
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 !s100 HQZaCSAK3A^TfZJYOi1PA2
+Z3 I_ORF5[oBN18M==GNMa5362
+Z4 V[74^FT<HMHM4<064fP?]d3
+Z5 !s105 eightBusInterface_sv_unit
+S1
+Z6 dE:\UT\DLD\CA\6
+Z7 w1738314978
+Z8 8E:/UT/DLD/CA/6/eightBusInterface.sv
+Z9 FE:/UT/DLD/CA/6/eightBusInterface.sv
+Z10 L0 148
+Z11 OV;L;10.1d;51
+r1
+31
+Z12 !s108 1738318023.132000
+Z13 !s107 E:/UT/DLD/CA/6/eightBusInterface.sv|
+Z14 !s90 -reportprogress|300|-work|work|-sv|E:/UT/DLD/CA/6/eightBusInterface.sv|
+Z15 o-work work -sv -O0
+!i10b 1
+!s85 0
+!s101 -O0
+veightBusInterface
+!i10b 1
+Z16 !s100 X]GmGD<9UCmW4Ai^d@jF33
+Z17 I8hFO[EBM76o8OF?C=O::z3
+Z18 Vzdz4N79MgG:J8m0@I1k3V3
+R6
+Z19 w1738317982
+Z20 8E:/UT/DLD/CA/6/simulation/modelsim/eightBusInterface.svo
+Z21 FE:/UT/DLD/CA/6/simulation/modelsim/eightBusInterface.svo
+L0 31
+R11
+r1
+!s85 0
+31
+!s108 1738318181.342000
+!s107 E:/UT/DLD/CA/6/simulation/modelsim/eightBusInterface.svo|
+Z22 !s90 -reportprogress|300|-work|work|E:/UT/DLD/CA/6/simulation/modelsim/eightBusInterface.svo|
+!s101 -O0
+Z23 o-work work -O0
+Z24 neight@bus@interface
+veightBusInterface_tb
+R1
+Z25 IPEzMYh7gNTD8k@fn7WAND1
+Z26 VWoaD0CRMbR7W=;RIPz2<K3
+Z27 !s105 CA6_TB_sv_unit
+S1
+R6
+Z28 w1738313560
+Z29 8E:\UT\DLD\CA\6\CA6_TB.sv
+Z30 FE:\UT\DLD\CA\6\CA6_TB.sv
+L0 3
+R11
+r1
+31
+Z31 !s90 -reportprogress|300|-work|work|-sv|E:\UT\DLD\CA\6\CA6_TB.sv|
+R15
+Z32 neight@bus@interface_tb
+Z33 !s100 YdLM18nN>16GTXb1e9z5o2
+Z34 !s108 1738313582.373000
+Z35 !s107 E:\UT\DLD\CA\6\CA6_TB.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vinputWrapper
+R1
+Z36 !s100 z8jgYh3g0OV3H_im0o[Ic1
+Z37 I05lB?h5CNa5@YjgM=_?Ue1
+Z38 V[Y47lWnI;SncSfk4Dn5E=3
+R5
+S1
+R6
+R7
+R8
+R9
+L0 3
+R11
+r1
+31
+R12
+R13
+R14
+R15
+Z39 ninput@wrapper
+!i10b 1
+!s85 0
+!s101 -O0
+voutputWrapper
+R1
+Z40 !s100 c@b>0Fldeoad2JNOMzVDJ2
+Z41 IcDcf;;PQAn]]gnV0kX08;3
+Z42 VL14IEha5NE4b;Z>BXYY[T1
+R5
+S1
+R6
+R7
+R8
+R9
+L0 81
+R11
+r1
+31
+R12
+R13
+R14
+R15
+Z43 noutput@wrapper
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_divider
+R1
+Z44 !s100 8L1Q;M_F?YJ<HTPaZKa_g2
+Z45 I<E@8Ce9F@O[WZoZ^4mgj60
+Z46 V=2:IaMhR5zMV0LRV`0`2G2
+R27
+S1
+R6
+Z47 w1738316808
+R29
+R30
+L0 33
+R11
+r1
+31
+Z48 !s108 1738316827.994000
+R35
+R31
+R15
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_inputWrapper
+R1
+Z49 !s100 BdGBhiYG>Td]MQAOafZ?f3
+Z50 If==;_VMRRMK99beKag=_b2
+Z51 VN]M?361QQ_CIj6GkKM2L_1
+R27
+S1
+R6
+R47
+R29
+R30
+L0 3
+R11
+r1
+31
+R48
+R35
+R31
+R15
+Z52 ntb_input@wrapper
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_outputWrapper
+R1
+Z53 !s100 aAPFBg`L4YYKkg@8H=lI13
+Z54 I<U6;]o>hmZ]Lgl]:<;nbh2
+Z55 Vi2z?I?T;Ulg4haR3_aJVQ2
+R27
+S1
+R6
+R47
+R29
+R30
+Z56 L0 143
+R11
+r1
+31
+R48
+R35
+R31
+R15
+Z57 ntb_output@wrapper
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+R1
+Z58 !s100 c37z7XU<I7FRmndW?O=^@1
+Z59 IRoR]Tb5jn[];jVU`9zS@B0
+Z60 VhGfW:390DM[oDMzegDH9`2
+R27
+S1
+R6
+Z61 w1738316974
+R29
+R30
+L0 3
+R11
+r1
+31
+R31
+R15
+!i10b 1
+!s85 0
+Z62 !s108 1738318181.251000
+R35
+!s101 -O0

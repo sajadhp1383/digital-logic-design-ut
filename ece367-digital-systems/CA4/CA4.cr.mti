@@ -1,0 +1,8 @@
+E:/UT/DLD/CA/4/Code/CA4_TB.sv {1 {vlog -work work -sv -stats=none E:/UT/DLD/CA/4/Code/CA4_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module harmonic_sum_TB
+
+Top level modules:
+	harmonic_sum_TB
+
+} {} {}}

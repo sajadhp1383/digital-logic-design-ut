@@ -1,0 +1,110 @@
+module counter (input clk,input reset,input enable,output reg [3:0] count);
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            count <= 4'b0;
+        else if (enable)
+            count <= count + 1;
+    end
+endmodule
+
+module adder(input[18:0]a, input[18:0]b, output[18:0]sum);
+    assign sum=a+b;
+endmodule
+
+module  comparator(input[3:0]a, input[3:0]b,output reg result);
+    always @(*)begin
+        result = (a<b);
+    end
+endmodule
+
+
+
+module rom_harmonic (
+    input [3:0] addr,
+    output reg [18:0] data
+);
+    (* rom_style = "block" *)
+    always @(*) begin
+        case (addr)
+            4'd0: data = 19'b0010000000000000000;
+            4'd1: data = 19'b0001000000000000000;
+            4'd2: data = 19'b0000101010101010101;
+            4'd3: data = 19'b0000100000000000000;
+            4'd4: data = 19'b0000011001100110011;
+            4'd5: data = 19'b0000010101010101010;
+            4'd6: data = 19'b0000010010010010010;
+            4'd7: data = 19'b0000010000000000000;
+            4'd8: data = 19'b0000001110001110001;
+            4'd9: data = 19'b0000001100110011001;
+            4'd10: data = 19'b0000001011101011101;
+            4'd11: data = 19'b0000001010101010101;
+            4'd12: data = 19'b0000001001100110011;
+            4'd13: data = 19'b0000001001001001001;
+            4'd14: data = 19'b0000001000100010001;
+            4'd15: data = 19'b0000001000000000000;
+            default: data = 19'b0000000000000000000;
+        endcase
+    end
+endmodule
+module CA4 (
+    input clk,
+    input reset,
+    input [3:0] n,
+    output reg [18:0] sum
+);
+
+    typedef enum reg [2:0] {
+        IDLE,
+        LOAD,
+        READ,
+        ADD,
+        CHECK
+    } state_t;
+
+    state_t state, next_state;
+    reg [18:0] temp_sum;
+    wire [18:0] data, add_result;
+    wire comp_result;
+    reg counter_enable;
+    wire [3:0] addr; 
+
+    
+    rom_harmonic rom (.addr(addr), .data(data));
+    adder add (.a(temp_sum), .b(data), .sum(add_result));
+    comparator comp (.a(addr), .b(n), .result(comp_result));
+    counter count_inst (.clk(clk), .reset(reset), .enable(counter_enable), .count(addr));
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            state <= IDLE;
+            sum <= 19'b0;
+            temp_sum <= 19'b0;
+        end else begin
+            state <= next_state;
+            if (state == ADD) temp_sum <= add_result;
+            if (state == CHECK && !comp_result) sum <= temp_sum;
+        end
+    end
+
+    always @(*) begin
+        next_state = state;
+        counter_enable = 0;
+
+        case (state)
+            IDLE: if (n > 0) next_state = LOAD;
+            LOAD: next_state = READ;
+            READ: next_state = ADD;
+            ADD: next_state = CHECK;
+            CHECK: begin
+                if (comp_result) begin
+                    counter_enable = 1;
+                    next_state = READ;
+                end else begin
+                    next_state = IDLE;
+                end
+            end
+        endcase
+    end
+
+endmodule
+
